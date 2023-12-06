@@ -1,2 +1,15 @@
+fi\disenho\entities\RegistroCliente.class
+fi\disenio\backing\UsuariosBean.class
+fi\disenho\entities\HuespedRegistro.class
+prueba\Conexion.class
+fi\disenho\entities\PosibleReservacion.class
+fi\disenho\entities\Habitacion.class
+fi\disenho\entities\ReporteReservacion.class
+fi\disenho\entities\Reservacion.class
 fi\disenho\apphotel\resources\JakartaEE91Resource.class
+fi\disenho\entities\Huesped.class
 fi\disenho\apphotel\JakartaRestConfiguration.class
+fi\disenho\entities\TipoHabitacion.class
+fi\disenho\entities\Usuario.class
+fi\disenio\backing\LoginBean.class
+fi\disenho\entities\Cliente.class
