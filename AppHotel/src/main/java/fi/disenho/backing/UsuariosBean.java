@@ -54,6 +54,12 @@ public class UsuariosBean implements Serializable {
         usuarioList = getUsuarios();
         showDialog = false;
     }
+    public void guardarUsuario(){
+        usuarioFacade.saveUsuario(usuario);
+        usuarioList = getUsuarios();
+        showDialog = false;
+        usuario = new Usuario();
+    }
     
     public void setUsuarioEdit(Usuario usu){
         usuario = usu;

@@ -51,7 +51,7 @@ public class Usuario implements Serializable {
     @Basic(optional = false)
     @Lob
     @Column(name = "clave")
-    private byte[] clave;
+    private String clave;
     @Basic(optional = false)
     @Column(name = "tipousuario")
     private short tipousuario;
@@ -70,7 +70,7 @@ public class Usuario implements Serializable {
         this.idusuario = idusuario;
     }
 
-    public Usuario(Integer idusuario, String nombre, String correo, String alias, byte[] clave, short tipousuario, short estado, Date ultimoacceso) {
+    public Usuario(Integer idusuario, String nombre, String correo, String alias, String clave, short tipousuario, short estado, Date ultimoacceso) {
         this.idusuario = idusuario;
         this.nombre = nombre;
         this.correo = correo;
@@ -113,11 +113,20 @@ public class Usuario implements Serializable {
         this.alias = alias;
     }
 
-    public byte[] getClave() {
+    public String getClave() {
         return clave;
     }
 
-    public void setClave(byte[] clave) {
+    public void setClave(String clave) {
+        /*
+        byte[] aux = new byte[(clave+"").split("").length];
+        int cont = 0;
+        
+        for(String s : (clave+"").split("")){
+            aux[cont] = Integer.valueOf(s).byteValue();
+        }
+*/
+        
         this.clave = clave;
     }
 

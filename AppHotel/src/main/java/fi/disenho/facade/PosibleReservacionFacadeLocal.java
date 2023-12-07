@@ -4,17 +4,16 @@
  */
 package fi.disenho.facade;
 
-import fi.disenho.entities.TipoHabitacion;
+import fi.disenho.entities.PosibleReservacion;
 import jakarta.ejb.Local;
 import java.util.List;
-
 /**
  *
  * @author Enrique
  */
 @Local
-public interface TipoHabitacionFacadeLocal {
-    public void saveTipoHabitacion(TipoHabitacion tipoHabitacion);
-    public TipoHabitacion findTipoHabitacion(String id);
-    public List<TipoHabitacion> getTiposHabitaciones();
+public interface PosibleReservacionFacadeLocal {
+    public void savePosibleReservacion(PosibleReservacion posibleReservacion);
+    public PosibleReservacion findPosibleReservacion(String id);
+    public List<PosibleReservacion> getPosibleReservaciones();
 }

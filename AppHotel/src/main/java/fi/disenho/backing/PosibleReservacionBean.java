@@ -19,38 +19,35 @@ import java.util.TimeZone;
 /**
  *
  */
-@Named(value = "pruebaBean")
+@Named(value = "posibleReservacionBean")
 @ViewScoped
-public class PruebaBean implements Serializable {
-    private Prueba prueba;
+public class PosibleReservacionBean implements Serializable {
+    private PosibleReservacion posibleReservacion;
 
     private boolean showDialog = false;
     
     
     
     @EJB
-    private PruebaFacadeLocal pruebaFacade;
+    private PosibleReservacionFacadeLocal posibleReservacionFacade;
     
     
     @PostConstruct
     public void init(){
-        prueba = new Prueba();
+        posibleReservacion = new PosibleReservacion();
     }
     
     
     public void noHaceNada(){
         FacesContext.getCurrentInstance()
-                .addMessage("prueba", 
+                .addMessage("posibleReservacion", 
                         new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuario no válido",""));
     }
     
-    public void guardarPrueba(){
-        pruebaFacade.savePrueba(prueba);
+    public void guardarPosibleReservacion(){
+        posibleReservacionFacade.savePosibleReservacion(posibleReservacion);
         showDialog = false;
-        prueba = new Prueba();
-    }
-    
-    public void eliminarUsuario(Usuario usr){
+        posibleReservacion = new PosibleReservacion();
     }
     
     
@@ -59,12 +56,12 @@ public class PruebaBean implements Serializable {
     }
     
 
-    public Prueba getPrueba() {
-        return prueba;
+    public PosibleReservacion getPosibleReservacion() {
+        return posibleReservacion;
     }
 
-    public void setPrueba(Prueba prpueba) {
-        this.prueba = prueba;
+    public void setPosibleReservacion(PosibleReservacion posibleReservacion) {
+        this.posibleReservacion = posibleReservacion;
     }
     
     

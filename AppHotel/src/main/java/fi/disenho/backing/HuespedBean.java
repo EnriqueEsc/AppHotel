@@ -19,38 +19,35 @@ import java.util.TimeZone;
 /**
  *
  */
-@Named(value = "pruebaBean")
+@Named(value = "huespedBean")
 @ViewScoped
-public class PruebaBean implements Serializable {
-    private Prueba prueba;
+public class HuespedBean implements Serializable {
+    private Huesped huesped;
 
     private boolean showDialog = false;
     
     
     
     @EJB
-    private PruebaFacadeLocal pruebaFacade;
+    private HuespedFacadeLocal huespedFacade;
     
     
     @PostConstruct
     public void init(){
-        prueba = new Prueba();
+        huesped = new Huesped();
     }
     
     
     public void noHaceNada(){
         FacesContext.getCurrentInstance()
-                .addMessage("prueba", 
+                .addMessage("huesped", 
                         new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuario no válido",""));
     }
     
-    public void guardarPrueba(){
-        pruebaFacade.savePrueba(prueba);
+    public void guardarHuesped(){
+        huespedFacade.saveHuesped(huesped);
         showDialog = false;
-        prueba = new Prueba();
-    }
-    
-    public void eliminarUsuario(Usuario usr){
+        huesped = new Huesped();
     }
     
     
@@ -59,12 +56,12 @@ public class PruebaBean implements Serializable {
     }
     
 
-    public Prueba getPrueba() {
-        return prueba;
+    public Huesped getHuesped() {
+        return huesped;
     }
 
-    public void setPrueba(Prueba prpueba) {
-        this.prueba = prueba;
+    public void setHuesped(Huesped huesped) {
+        this.huesped = huesped;
     }
     
     

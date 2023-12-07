@@ -19,38 +19,35 @@ import java.util.TimeZone;
 /**
  *
  */
-@Named(value = "pruebaBean")
+@Named(value = "tipoHabitacionBean")
 @ViewScoped
-public class PruebaBean implements Serializable {
-    private Prueba prueba;
+public class TipoHabitacionBean implements Serializable {
+    private TipoHabitacion tipoHabitacion;
 
     private boolean showDialog = false;
     
     
     
     @EJB
-    private PruebaFacadeLocal pruebaFacade;
+    private TipoHabitacionFacadeLocal tipoHabitacionFacade;
     
     
     @PostConstruct
     public void init(){
-        prueba = new Prueba();
+        tipoHabitacion = new TipoHabitacion();
     }
     
     
     public void noHaceNada(){
         FacesContext.getCurrentInstance()
-                .addMessage("prueba", 
+                .addMessage("tipoHabitacion", 
                         new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuario no válido",""));
     }
     
-    public void guardarPrueba(){
-        pruebaFacade.savePrueba(prueba);
+    public void guardarTipoHabitacion(){
+        tipoHabitacionFacade.saveTipoHabitacion(tipoHabitacion);
         showDialog = false;
-        prueba = new Prueba();
-    }
-    
-    public void eliminarUsuario(Usuario usr){
+        tipoHabitacion = new TipoHabitacion();
     }
     
     
@@ -59,12 +56,12 @@ public class PruebaBean implements Serializable {
     }
     
 
-    public Prueba getPrueba() {
-        return prueba;
+    public TipoHabitacion getTipoHabitacion() {
+        return tipoHabitacion;
     }
 
-    public void setPrueba(Prueba prpueba) {
-        this.prueba = prueba;
+    public void setTipoHabitacion(TipoHabitacion tipoHabitacion) {
+        this.tipoHabitacion = tipoHabitacion;
     }
     
     

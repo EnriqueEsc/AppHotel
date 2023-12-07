@@ -19,38 +19,35 @@ import java.util.TimeZone;
 /**
  *
  */
-@Named(value = "pruebaBean")
+@Named(value = "clienteBean")
 @ViewScoped
-public class PruebaBean implements Serializable {
-    private Prueba prueba;
+public class ClienteBean implements Serializable {
+    private Cliente cliente;
 
     private boolean showDialog = false;
     
     
     
     @EJB
-    private PruebaFacadeLocal pruebaFacade;
+    private ClienteFacadeLocal clienteFacade;
     
     
     @PostConstruct
     public void init(){
-        prueba = new Prueba();
+        cliente = new Cliente();
     }
     
     
     public void noHaceNada(){
         FacesContext.getCurrentInstance()
-                .addMessage("prueba", 
+                .addMessage("cliente", 
                         new FacesMessage(FacesMessage.SEVERITY_ERROR,"Usuario no válido",""));
     }
     
-    public void guardarPrueba(){
-        pruebaFacade.savePrueba(prueba);
+    public void guardarCliente(){
+        clienteFacade.saveCliente(cliente);
         showDialog = false;
-        prueba = new Prueba();
-    }
-    
-    public void eliminarUsuario(Usuario usr){
+        cliente = new Cliente();
     }
     
     
@@ -59,12 +56,12 @@ public class PruebaBean implements Serializable {
     }
     
 
-    public Prueba getPrueba() {
-        return prueba;
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setPrueba(Prueba prpueba) {
-        this.prueba = prueba;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
     
     

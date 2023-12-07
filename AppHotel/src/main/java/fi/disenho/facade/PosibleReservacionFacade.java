@@ -4,7 +4,7 @@
  */
 package fi.disenho.facade;
 
-import fi.disenho.entities.TipoHabitacion;
+import fi.disenho.entities.PosibleReservacion;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
@@ -18,33 +18,31 @@ import java.util.List;
  * @author Enrique
  */
 @Stateless
-public class TipoHabitacionFacade implements TipoHabitacionFacadeLocal {
+public class PosibleReservacionFacade implements PosibleReservacionFacadeLocal {
     
     @PersistenceContext(name = "disenio_unit")
     private EntityManager em;
     
-    
     @Override
-    public void saveTipoHabitacion(TipoHabitacion tipoHabitacion){
-        em.persist(tipoHabitacion);
+    public void savePosibleReservacion(PosibleReservacion posibleReservacion){
+        em.persist(posibleReservacion);
         
     }
-
     
     @Override
-    public TipoHabitacion findTipoHabitacion(String id){
-        Query query = em.createNamedQuery("TipoHabitacion.findByIdtipohabitacion");
-        query.setParameter("idtipohabitacion",id);
+    public PosibleReservacion findPosibleReservacion(String id){
+        Query query = em.createNamedQuery("PosibleReservacion.findByIdposiblereservacion");
+        query.setParameter("idposiblereservacion",id);
         
         try{
-             return (TipoHabitacion)query.getSingleResult();
+             return (PosibleReservacion)query.getSingleResult();
         }catch(NoResultException ex){
             return null;
         }
     }
     
     @Override
-    public List<TipoHabitacion> getTiposHabitaciones(){
-        return em.createNamedQuery("TipoHabitacion.findAll").getResultList();
+    public List<PosibleReservacion> getPosibleReservaciones(){
+        return em.createNamedQuery("ReporteReservacion.findAll").getResultList();
     }
 }
