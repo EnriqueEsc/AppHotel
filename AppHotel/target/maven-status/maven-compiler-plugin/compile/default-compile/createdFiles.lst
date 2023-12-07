@@ -11,7 +11,9 @@ fi\disenho\apphotel\resources\JakartaEE91Resource.class
 fi\disenho\backing\LoginBean.class
 fi\disenho\apphotel\JakartaRestConfiguration.class
 fi\disenho\facade\ClienteFacade.class
+fi\disenho\backing\TipoHabitacionBean.class
 fi\disenho\entities\TipoHabitacion.class
+fi\disenho\backing\HuespedBean.class
 fi\disenho\entities\Usuario.class
 fi\disenho\facade\HabitacionFacade.class
 fi\disenho\facade\ClienteFacadeLocal.class
@@ -23,6 +25,7 @@ fi\disenho\entities\HuespedRegistro.class
 fi\disenho\facade\ReservacionFacadeLocal.class
 prueba\Conexion.class
 fi\disenho\entities\PosibleReservacion.class
+fi\disenho\backing\PosibleReservacionBean.class
 fi\disenho\facade\UsuarioFacade.class
 fi\disenho\entities\Prueba.class
 fi\disenho\entities\ReporteReservacion.class
@@ -31,5 +34,8 @@ fi\disenho\facade\PruebaFacadeLocal.class
 fi\disenho\entities\Huesped.class
 fi\disenho\facade\HuespedFacade.class
 fi\disenho\facade\ReservacionFacade.class
+fi\disenho\facade\PosibleReservacionFacadeLocal.class
 fi\disenho\facade\HuespedRegistroFacade.class
 fi\disenho\facade\TipoHabitacionFacade.class
+fi\disenho\facade\PosibleReservacionFacade.class
+fi\disenho\backing\ClienteBean.class
