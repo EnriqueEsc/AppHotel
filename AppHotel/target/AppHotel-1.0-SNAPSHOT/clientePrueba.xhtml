@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>-- PRUEBA REGISTRO CLIENTE --</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            <h:outputLabel value="Registro de Cliente"/>
+            
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Id:"/>
+                <h:inputText value="#{clienteBean.cliente.idcliente}"/>
+                
+                <h:outputLabel value="Nombre:"/>
+                <h:inputText value="#{clienteBean.cliente.nombre}"/>
+                
+                <h:outputLabel value="Apellidos:"/>
+                <h:inputText value="#{clienteBean.cliente.apellidos}"/>
+                
+                <h:outputLabel value="Correo:"/>
+                <h:inputText value="#{clienteBean.cliente.correo}"/>
+                
+                <h:outputLabel value="Huella:"/>
+                <h:inputText value="#{clienteBean.cliente.huella}"/>
+                
+                
+                
+                
+                
+            </h:panelGrid>
+            
+            <h:commandButton value="Registrar"
+                             action="#{clienteBean.guardarCliente}"/>
+            
+        </h:form>
+    </h:body>
+</html>
