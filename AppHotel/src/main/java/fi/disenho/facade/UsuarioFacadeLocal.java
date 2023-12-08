@@ -16,6 +16,7 @@ import java.util.List;
 public interface UsuarioFacadeLocal {
     public void saveUsuario(Usuario usuario);
     public Usuario findUsuario(String correo, String clave);
+    public Usuario findUsuario(Usuario usuario);
     public List<Usuario> getUsuarios();
     public void removeUsurio(Usuario usu);
 }

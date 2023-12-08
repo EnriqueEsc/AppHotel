@@ -15,6 +15,6 @@ import java.util.List;
 @Local
 public interface HabitacionFacadeLocal {
     public void saveHabitacion(Habitacion habitacion);
-    public Habitacion findHabitacion(String id);
+    public Habitacion findHabitacion(Habitacion habitacion);
     public List<Habitacion> getHabitaciones();
 }

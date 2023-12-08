@@ -15,6 +15,6 @@ import java.util.List;
 @Local
 public interface HuespedFacadeLocal {
     public void saveHuesped(Huesped huesped);
-    public Huesped findHuesped(String id);
+    public Huesped findHuesped(Huesped huesped);
     public List<Huesped> getHuespedes();
 }

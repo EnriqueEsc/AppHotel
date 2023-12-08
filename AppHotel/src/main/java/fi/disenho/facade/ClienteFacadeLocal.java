@@ -15,7 +15,7 @@ import java.util.List;
 @Local
 public interface ClienteFacadeLocal {
     public void saveCliente(Cliente cliente);
-    public Cliente findCliente(String id);
+    public Cliente findCliente(Cliente cliente);
     public List<Cliente> getClientes();
     
 }

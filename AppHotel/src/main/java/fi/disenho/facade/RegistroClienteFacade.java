@@ -4,7 +4,7 @@
  */
 package fi.disenho.facade;
 
-import fi.disenho.entities.Reservacion;
+import fi.disenho.entities.RegistroCliente;
 import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
@@ -18,24 +18,24 @@ import java.util.List;
  * @author Enrique
  */
 @Stateless
-public class ReservacionFacade implements ReservacionFacadeLocal {
+public class RegistroClienteFacade implements RegistroClienteFacadeLocal {
     
     @PersistenceContext(name = "disenio_unit")
     private EntityManager em;
     
     @Override
-    public void saveReservacion(Reservacion reservacion){
-        em.persist(reservacion);
+    public void saveRegistroCliente(RegistroCliente registroCliente){
+        em.persist(registroCliente);
         
     }
     
     @Override
-    public Reservacion findReservacion(Reservacion reservacion){
-        return em.find(Reservacion.class, reservacion.getIdreservacion());
+    public RegistroCliente findRegistroCliente(RegistroCliente registroCliente){
+        return em.find(RegistroCliente.class, registroCliente.getIdregistrocliente());
     }
     
     @Override
-    public List<Reservacion> getReservaciones(){
-        return em.createNamedQuery("Reservacion.findAll").getResultList();
+    public List<RegistroCliente> getRegistroClientes(){
+        return em.createNamedQuery("RegistroCliente.findAll").getResultList();
     }
 }

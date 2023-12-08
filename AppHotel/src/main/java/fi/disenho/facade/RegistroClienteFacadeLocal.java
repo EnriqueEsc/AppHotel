@@ -4,7 +4,7 @@
  */
 package fi.disenho.facade;
 
-import fi.disenho.entities.TipoHabitacion;
+import fi.disenho.entities.RegistroCliente;
 import jakarta.ejb.Local;
 import java.util.List;
 
@@ -13,8 +13,9 @@ import java.util.List;
  * @author Enrique
  */
 @Local
-public interface TipoHabitacionFacadeLocal {
-    public void saveTipoHabitacion(TipoHabitacion tipoHabitacion);
-    public TipoHabitacion findTipoHabitacion(TipoHabitacion tipoHabitacion);
-    public List<TipoHabitacion> getTiposHabitaciones();
+public interface RegistroClienteFacadeLocal {
+    public void saveRegistroCliente(RegistroCliente registroCliente);
+    public RegistroCliente findRegistroCliente(RegistroCliente registroCliente);
+    public List<RegistroCliente> getRegistroClientes();
+    
 }

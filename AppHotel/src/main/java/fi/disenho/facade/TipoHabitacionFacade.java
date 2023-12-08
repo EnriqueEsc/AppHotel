@@ -32,15 +32,8 @@ public class TipoHabitacionFacade implements TipoHabitacionFacadeLocal {
 
     
     @Override
-    public TipoHabitacion findTipoHabitacion(String id){
-        Query query = em.createNamedQuery("TipoHabitacion.findByIdtipohabitacion");
-        query.setParameter("idtipohabitacion",id);
-        
-        try{
-             return (TipoHabitacion)query.getSingleResult();
-        }catch(NoResultException ex){
-            return null;
-        }
+    public TipoHabitacion findTipoHabitacion(TipoHabitacion tipoHabitacion){
+        return em.find(TipoHabitacion.class, tipoHabitacion.getIdtipohabitacion());
     }
     
     @Override

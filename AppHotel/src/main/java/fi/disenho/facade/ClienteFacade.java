@@ -30,15 +30,8 @@ public class ClienteFacade implements ClienteFacadeLocal {
     }
     
     @Override
-    public Cliente findCliente(String id){
-        Query query = em.createNamedQuery("Cliente.findByIdcliente");
-        query.setParameter("idcliente",id);
-        
-        try{
-             return (Cliente)query.getSingleResult();
-        }catch(NoResultException ex){
-            return null;
-        }
+    public Cliente findCliente(Cliente cliente){
+        return em.find(Cliente.class, cliente.getIdcliente());
     }
     
     @Override

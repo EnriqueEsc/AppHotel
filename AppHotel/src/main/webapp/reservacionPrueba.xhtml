@@ -4,39 +4,44 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>-- TEST CLIENTE REGISTRO --</title>
+        <title>-- PRUEBA REGISTRO RESERVACION --</title>
     </h:head>
     <h:body>
         <h:form>
             
-            <h:outputLabel value="Dar de alta registro de cliente"/>
-            
+            <h:outputLabel value="Registro de Reservacion"/>
+            <br/>
             <h:panelGrid columns="2">
                 <h:outputLabel value="Id:"/>
-                <h:inputText value="#{registroClienteBean.registro_cliente.idregistrocliente}"/>
+                <h:inputText value="#{reservacionBean.reservacion.idreservacion}"/>   
                 
-                <h:outputLabel value="Id de cliente:"/>
-                <h:inputText value="#{registroClienteBean.clienteid}"/>
+                <h:outputLabel value="Id Habitacion:"/>
+                <h:inputText value="#{reservacionBean.habitacionid}"/>
                 
-                <h:outputLabel value="Id de habitacion:"/>
-                <h:inputText value="#{registroClienteBean.usuarioid}"/>
+                <h:outputLabel value="Id Cliente:"/>
+                <h:inputText value="#{reservacionBean.clienteid}"/>
                 
-                <h:outputLabel value="Id de usuario:"/>
-                <h:inputText value="#{registroClienteBean.usuarioid}"/>
+                <h:outputLabel value="Id Usuario:"/>
+                <h:inputText value="#{reservacionBean.reservacion.idusuario}"/>
+                
+                
+                <h:outputLabel value="Precio:"/>
+                <h:inputText value="#{reservacionBean.reservacion.precio}"/>
                 
                 <h:outputLabel value="Fecha de ingreso:"/>
-                <h:inputText value="#{registroClienteBean.registro_cliente.fechaingreso}">
+                <h:inputText value="#{reservacionBean.reservacion.fechaingreso}">
                     <f:convertDateTime pattern="dd/mm/yyyy"
                                        type="date"
                                        timeZone="#{usuariosBean.timeZone}"/>
                     </h:inputText>
                 
                 <h:outputLabel value="Fecha de salida:"/>
-                <h:inputText value="#{registroClienteBean.registro_cliente.fechasalida}">
+                <h:inputText value="#{reservacionBean.reservacion.fechasalida}">
                     <f:convertDateTime pattern="dd/mm/yyyy"
                                        type="date"
                                        timeZone="#{usuariosBean.timeZone}"/>
                     </h:inputText>
+                
                 
                 
                 
@@ -44,7 +49,7 @@
             </h:panelGrid>
             
             <h:commandButton value="Registrar"
-                             action="#{registroClienteBean.guardarHuesped}"/>
+                             action="#{reservacionBean.guardarReservacion}"/>
             
         </h:form>
     </h:body>

@@ -14,6 +14,6 @@ import java.util.List;
 @Local
 public interface ReservacionFacadeLocal {
     public void saveReservacion(Reservacion reservacion);
-    public Reservacion findReservacion(String id);
+    public Reservacion findReservacion(Reservacion reservacion);
     public List<Reservacion> getReservaciones();
 }

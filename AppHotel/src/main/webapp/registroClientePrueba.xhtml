@@ -9,34 +9,35 @@
     <h:body>
         <h:form>
             
-            <h:outputLabel value="Dar de alta registro de cliente"/>
+            <h:outputLabel value="Test de Registro Cliente"/>
             
             <h:panelGrid columns="2">
                 <h:outputLabel value="Id:"/>
-                <h:inputText value="#{registroClienteBean.registro_cliente.idregistrocliente}"/>
+                <h:inputText value="#{registroClienteBean.registroCliente.idregistrocliente}"/>
                 
-                <h:outputLabel value="Id de cliente:"/>
+                <h:outputLabel value="Id cliente:"/>
                 <h:inputText value="#{registroClienteBean.clienteid}"/>
                 
-                <h:outputLabel value="Id de habitacion:"/>
-                <h:inputText value="#{registroClienteBean.usuarioid}"/>
+                <h:outputLabel value="Id habitacion:"/>
+                <h:inputText value="#{registroClienteBean.habitacionid}"/>
                 
-                <h:outputLabel value="Id de usuario:"/>
+                <h:outputLabel value="Id Usuario:"/>
                 <h:inputText value="#{registroClienteBean.usuarioid}"/>
                 
                 <h:outputLabel value="Fecha de ingreso:"/>
-                <h:inputText value="#{registroClienteBean.registro_cliente.fechaingreso}">
+                <h:inputText value="#{registroClienteBean.registroCliente.fechaingreso}">
                     <f:convertDateTime pattern="dd/mm/yyyy"
                                        type="date"
                                        timeZone="#{usuariosBean.timeZone}"/>
                     </h:inputText>
                 
                 <h:outputLabel value="Fecha de salida:"/>
-                <h:inputText value="#{registroClienteBean.registro_cliente.fechasalida}">
+                <h:inputText value="#{registroClienteBean.registroCliente.fechasalida}">
                     <f:convertDateTime pattern="dd/mm/yyyy"
                                        type="date"
                                        timeZone="#{usuariosBean.timeZone}"/>
                     </h:inputText>
+                
                 
                 
                 
@@ -44,7 +45,7 @@
             </h:panelGrid>
             
             <h:commandButton value="Registrar"
-                             action="#{registroClienteBean.guardarHuesped}"/>
+                             action="#{registroClienteBean.guardarRegistroCliente}"/>
             
         </h:form>
     </h:body>

@@ -39,6 +39,11 @@ public class UsuarioFacade implements UsuarioFacadeLocal {
     }
     
     @Override
+    public Usuario findUsuario(Usuario usuario){
+        return em.find(Usuario.class, usuario.getIdusuario());
+    }
+    
+    @Override
     public List<Usuario> getUsuarios(){
         return em.createNamedQuery("Usuario.findAll").getResultList();
     }

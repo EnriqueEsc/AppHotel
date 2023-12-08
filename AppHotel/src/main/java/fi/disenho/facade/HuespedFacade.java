@@ -30,15 +30,8 @@ public class HuespedFacade implements HuespedFacadeLocal {
     }
     
     @Override
-    public Huesped findHuesped(String id){
-        Query query = em.createNamedQuery("Huesped.findByIdhuesped");
-        query.setParameter("idhuesped",id);
-        
-        try{
-             return (Huesped)query.getSingleResult();
-        }catch(NoResultException ex){
-            return null;
-        }
+    public Huesped findHuesped(Huesped huesped){
+        return em.find(Huesped.class, huesped.getIdhuesped());
     }
     
     @Override

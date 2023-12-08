@@ -36,15 +36,8 @@ public class HabitacionFacade implements HabitacionFacadeLocal {
     }
     
     @Override
-    public Habitacion findHabitacion(String id){
-        Query query = em.createNamedQuery("Habitacion.findByIdhabitacion");
-        query.setParameter("idhabitacion",id);
-        
-        try{
-             return (Habitacion)query.getSingleResult();
-        }catch(NoResultException ex){
-            return null;
-        }
+    public Habitacion findHabitacion(Habitacion habitacion){
+        return em.find(Habitacion.class, habitacion.getIdhabitacion());
     }
     
     @Override
