@@ -6,6 +6,8 @@ C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\fa
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\entities\Habitacion.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\entities\Prueba.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\entities\ReporteReservacion.java
+C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\HabitacionBean.java
+C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\HuespedRegistroBean.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\PruebaFacade.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\HabitacionFacade.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\HuespedRegistroFacadeLocal.java
@@ -20,10 +22,12 @@ C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\fa
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\ClienteFacadeLocal.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\entities\HuespedRegistro.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\apphotel\JakartaRestConfiguration.java
+C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\ReporteReservacionBean.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\UsuarioFacadeLocal.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\entities\Usuario.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\PosibleReservacionBean.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\apphotel\resources\JakartaEE91Resource.java
+C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\RegistroClienteBean.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\TipoHabitacionFacade.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\TipoHabitacionFacadeLocal.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\ClienteBean.java
@@ -32,9 +36,12 @@ C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\en
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\entities\Reservacion.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\entities\PosibleReservacion.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\PosibleReservacionFacade.java
+C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\ReservacionBean.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\ReporteReservacionFacadeLocal.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\LoginBean.java
+C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\RegistroClienteFacadeLocal.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\PruebaFacadeLocal.java
+C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\RegistroClienteFacade.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\facade\HuespedRegistroFacade.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\HuespedBean.java
 C:\Users\Enrique\Documents\NetBeansProjects\AppHotel\src\main\java\fi\disenho\backing\TipoHabitacionBean.java
