@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>-- PRUEBA REGISTRO USUARIOS --</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            <h:outputLabel value="Registro de usuario"/>
+            
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Id:"/>
+                <h:inputText value="#{usuariosBean.usuario.idusuario}"/>
+                
+                <h:outputLabel value="Nombre:"/>
+                <h:inputText value="#{usuariosBean.usuario.nombre}"/>
+                
+                <h:outputLabel value="Correo: "/>
+                <h:inputText value="#{usuariosBean.usuario.correo}"/>
+                
+                <h:outputLabel value="Alias:"/>
+                <h:inputText value="#{usuariosBean.usuario.alias}"/>
+                
+                <h:outputLabel value="Clave: "/>
+                <h:inputText value="#{usuariosBean.usuario.clave}"/>
+                
+                <h:outputLabel value="Tipo: "/>
+                <h:inputText value="#{usuariosBean.usuario.tipousuario}"/>
+                
+                <h:outputLabel value="Estado: "/>
+                <h:inputText value="#{usuariosBean.usuario.estado}"/>
+                
+                <h:outputLabel value="Ultimo Acceso:"/>
+                <h:inputText value="#{usuariosBean.usuario.ultimoacceso}">
+                    <f:convertDateTime pattern="dd/mm/yyyy"
+                                       type="date"
+                                       timeZone="#{usuariosBean.timeZone}"/>
+                    </h:inputText>
+                
+                
+                
+                
+            </h:panelGrid>
+            
+            <h:commandButton value="Registrar"
+                             action="#{usuariosBean.guardarUsuario}"/>
+            
+        </h:form>
+    </h:body>
+</html>
