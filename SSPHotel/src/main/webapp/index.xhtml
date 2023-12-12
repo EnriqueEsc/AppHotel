@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="styles.css"/>
+
+</head>
+<body>
+
+    <!--BARRA DE NAVEGACIÓN-->
+    <div class="navbar">
+        <div class="company-name" onclick="navigateTo('index.xhtml')">Sereno Palazzo Paradiso</div>
+        <div class="nav-buttons">
+            <div class="nav-button" onclick="navigateTo('about.xhtml')">SOBRE NOSOTROS</div>
+            <div class="nav-button" onclick="navigateTo('hotels.xhtml')">HOTELES</div>
+            <div class="nav-button" onclick="navigateTo('destinations.xhtml')">DESTINOS</div>
+            <div class="nav-button" onclick="navigateTo('contact.xhtml')">CONTÁCTANOS</div>
+        </div>
+        <div class="login-button" onclick="navigateTo('login.xhtml')">Log In/Sign Up</div>
+    </div>
+
+    <!--CONTENEDOR DE BIENVENIDA-->
+    <div class="welcome-container-video">
+            <!-- Agrega autoplay y loop para reproducción automática y en bucle -->       
+                <video width="100" height="600" autoplay = "true" loop = "true" play = "true">
+                    <source src="Recursos/hotel.mp4" type="video/mp4"/>
+                </video>
+        <div class="welcome-message">
+            <h1>BIENVENIDO</h1>
+                <p>Nuestro compromiso: hacer de cada visita una historia para contar</p>
+        </div>
+    </div>
+
+    
+    <!--PARA RESERVAR-->
+    <div class="reservation-container">
+        <h2>Reserva de Hotel</h2>
+        <form>
+            <label for="destination">Destino:</label>
+            <select id="destination" name="destination">
+                <option value="italia">Italia</option>
+                <option value="suiza">Suiza</option>
+                <option value="colombia">Colombia</option>
+            </select>
+            
+            
+            <label for="checkin">Fecha de Entrada:</label>
+            <input type="date" id="checkin" name="checkin" required="true"/>
+
+            <label for="checkout">Fecha de Salida:</label>
+            <input type="date" id="checkout" name="checkout" required="true"/>
+
+            <label for="adults">Adultos:</label>
+            <input type="number" id="adults" name="adults" min="1" class="small-input" required="true"/>
+
+            <label for="children">Niños:</label>
+            <input type="number" id="children" name="children" min="0" class="small-input" required="true"/>
+
+            <button type="submit">Buscar Disponibilidad</button>
+        </form>
+    </div>
+    
+    <!--OFERTAS, PROMOCIONES Y DESCUENTOS (SOLO ES PUBLICIDAD)-->
+<!--ENCABEZADO DE DESTINOS-->
+     <h1 class="header">APROVECHA ESTAS FECHAS PARA COMPARTIR CON TUS SERES QUERIDOS</h1>
+     
+    <!-- Carrusel con texto -->
+<div class="carousel">
+    <div class="carousel-item">
+        <img src="Recursos/oferta-1.jpg" alt="Imagen 1"/>
+        <div class="carousel-caption">
+            <p>DISFRUTA DE LA NAVIDAD CON TUS SERES QUERIDOS</p>
+        </div>
+    </div>
+    <!-- Agrega más elementos .carousel-item para más imágenes -->
+    <div class="carousel-item">
+        <img src="Recursos/oferta2.jpg" alt="Segunda Imagen"/>
+        <div class="carousel-caption">
+            <p>Disfruta de nuestros destinos</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="Recursos/oferta3.jpg" alt="Tercera Imagen"/>
+        <div class="carousel-caption">
+            <p>Disfruta de nuestros hoteles</p>
+        </div>
+    </div>
+</div>
+    
+    <!--ENCABEZADO DE DESTINOS-->
+     <h1 class="header">DESTINOS</h1>
+    
+    <!--MOSAICO DE INICIO-->
+    <div class="destination-container">
+        <div class="destination">
+            <img src="Recursos/hotel-royal-plaza.jpg" alt="Italia"/>
+            <h3>Italia</h3>
+        </div>
+        <div class="destination">
+            <img src="Recursos/hotel-la-balance.jpg" alt="Suiza"/>
+            <h3>Suiza</h3>
+        </div>
+        <div class="destination">
+            <img src="Recursos/the-boato-hotel.jpg" alt="Colombia"/>
+            <h3>Colombia</h3>
+        </div>
+    </div>
+
+  
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    &copy; 2023 Sereno Palazzo Paradiso. Todos los derechos reservados.
+                </div>
+                    <div class="social-media">
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="Recursos/facebook-icon.png" alt="Facebook"/></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="Recursos/twitter-icon.png" alt="Twitter"/></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="Recursos/instagram-icon.png" alt="Instagram"/></a>
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+    
+    <!-- Agrega la referencia a la biblioteca de Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+<!-- Agrega la referencia al tema de Slick (opcional) -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+<!-- Agrega la referencia a jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- Agrega la referencia a la biblioteca de Slick JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('.carousel').slick({
+            autoplay: true,
+            autoplaySpeed: 3000, // Cambia este valor para ajustar el tiempo en milisegundos entre cada cambio de imagen
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    });
+</script>
+
+</body>
+</html>
