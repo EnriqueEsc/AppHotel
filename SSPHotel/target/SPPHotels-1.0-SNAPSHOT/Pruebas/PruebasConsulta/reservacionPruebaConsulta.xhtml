@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>-- PRUEBA REGISTRO RESERVACION --</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            
+            <br/>
+                    <p:dataTable value="#{reservacionBean.listReservaciones}"
+                                 var="res">
+                        <p:column headerText="Id:">
+                            <h:outputLabel value="#{res.idreservacion}"/>
+                        </p:column>
+                        <p:column headerText="Tipo Habitacion">
+                            <h:outputLabel value="#{res.idhabitacion.idtipohabitacion.idtipohabitacion}"/>
+                        </p:column>
+                        <p:column headerText="Descripcion">
+                            <h:outputLabel value="#{res.idhabitacion.idtipohabitacion.descripcion}"/>
+                        </p:column>
+                        <p:column headerText="Precio">
+                            <h:outputLabel value="#{res.precio}"/>
+                        </p:column>
+                        <p:column headerText="Fecha de ingreso">
+                            <h:outputLabel value="#{res.fechaingreso}">
+                    <f:convertDateTime pattern="dd/mm/yyyy"
+                                       type="date"
+                                       timeZone="#{usuariosBean.timeZone}"/>
+                            </h:outputLabel>
+                        </p:column>
+                        <p:column headerText="Fecha de salida">
+                            <h:outputLabel value="#{res.fechasalida}">
+                    <f:convertDateTime pattern="dd/mm/yyyy"
+                                       type="date"
+                                       timeZone="#{usuariosBean.timeZone}"/>
+                            </h:outputLabel>
+                        </p:column>
+                        <p:column headerText="Id Habitacion">
+                            <h:outputLabel value="#{res.idhabitacion.idhabitacion}"/>
+                        </p:column>
+                        <p:column headerText="Id Cliente">
+                            <h:outputLabel value="#{res.idcliente.idcliente}"/>
+                        </p:column>
+                        <p:column headerText="Id Usuario">
+                            <h:outputLabel value="#{res.idusuario}"/>
+                        </p:column>
+                        <p:column headerText="Estado">
+                            <h:outputLabel value="#{res.idhabitacion.estado}"/>
+                        </p:column>
+
+                    </p:dataTable>
+            <br/>
+            
+            <h:outputLabel value="Registro de Reservacion"/>
+            <br/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Id:"/>
+                <h:inputText value="#{reservacionBean.reservacion.idreservacion}"/>   
+                
+                <h:outputLabel value="Id Habitacion:"/>
+                <h:inputText value="#{reservacionBean.habitacionid}"/>
+                
+                <h:outputLabel value="Id Cliente:"/>
+                <h:inputText value="#{reservacionBean.clienteid}"/>
+                
+                <h:outputLabel value="Id Usuario:"/>
+                <h:inputText value="#{reservacionBean.reservacion.idusuario}"/>
+                
+                
+                <h:outputLabel value="Precio:"/>
+                <h:inputText value="#{reservacionBean.reservacion.precio}"/>
+                
+                <h:outputLabel value="Fecha de ingreso:"/>
+                <h:inputText value="#{reservacionBean.reservacion.fechaingreso}">
+                    <f:convertDateTime pattern="dd/mm/yyyy"
+                                       type="date"
+                                       timeZone="#{usuariosBean.timeZone}"/>
+                    </h:inputText>
+                
+                <h:outputLabel value="Fecha de salida:"/>
+                <h:inputText value="#{reservacionBean.reservacion.fechasalida}">
+                    <f:convertDateTime pattern="dd/mm/yyyy"
+                                       type="date"
+                                       timeZone="#{usuariosBean.timeZone}"/>
+                    </h:inputText>
+                
+                
+                
+                
+                
+            </h:panelGrid>
+            
+            <h:commandButton value="Registrar"
+                             action="#{reservacionBean.guardarReservacion}"/>
+            
+        </h:form>
+    </h:body>
+</html>
