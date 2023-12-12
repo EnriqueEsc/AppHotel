@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Login</title>
+</head>
+<body>
+    
+        <f:view locale="#{loginBean.locale}">
+  <div class="container-login">
+    <div class="login-container">
+      <h1>Login</h1>
+      <form action="tu_archivo_de_procesamiento.php" method="post">
+        <button type="submit">Ingresar</button>
+      </form>
+      
+      
+            
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Correo: "/>
+                    <h:inputText value="#{loginBean.correo}" pt:placeholder = "Correo"/>
+
+                    <h:outputLabel value="Clave: "/>
+                    <h:inputSecret value="#{loginBean.clave}" pt:placeholder = "Clave">
+                    </h:inputSecret>
+
+                </h:panelGrid>
+                <h:commandButton value="Login"
+                                 action="#{loginBean.validarLogin}"/>
+                <br/>
+                <br/>
+                    <h:outputLabel value="¿No tienes una cuenta?"/>
+                <br/>
+            </h:form>
+      
+      
+                
+      
+            <div class="login-button" onclick="navigateTo('singup.xhtml')">Registrate</div>
+      
+      <div class="social-login">
+        <p>O inicia sesión con:</p>
+        <div class="social-icons">
+          <a href="#" class="google-icon"><img src="Recursos/google-icon.png" alt="Google"/></a>
+          <a href="#" class="facebook-icon"><img src="Recursos/facebook-icon.png" alt="Facebook"/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    &copy; 2023 Sereno Palazzo Paradiso. Todos los derechos reservados.
+                </div>
+                    <div class="social-media">
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="Recursos/facebook-icon.png" alt="Facebook"/></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="Recursos/twitter-icon.png" alt="Twitter"/></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"><img src="Recursos/instagram-icon.png" alt="Instagram"/></a>
+                    </div>
+                </div>
+        </div>
+    </footer>
+    
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+    
+    
+    
+    
+        </f:view>
+</body>
+</html>
