@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>-- PRUEBA REGISTRO DE HABITACION --</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            <br/>
+            
+            <br/>
+            <h:outputLabel value="Registro de Habitacion"/>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Id habitacion:"/>
+                <h:inputText value="#{habitacionBean.habitacion.idhabitacion}"/>
+                
+                <h:outputLabel value="Codigo habitacion:"/>
+                <h:inputText value="#{habitacionBean.habitacion.codigohabitacion}"/>
+                
+                <h:outputLabel value="Id tipo de habitacion:"/>
+                <h:inputText value="#{habitacionBean.tipohabitacionid}"/>
+                
+                <h:outputLabel value="Estado:"/>
+                <h:inputText value="#{habitacionBean.habitacion.estado}"/>
+            </h:panelGrid>
+            
+            <h:commandButton value="Registrar"
+                             action="#{habitacionBean.guardarHabitacion}"/>
+            
+        </h:form>
+    </h:body>
+</html>

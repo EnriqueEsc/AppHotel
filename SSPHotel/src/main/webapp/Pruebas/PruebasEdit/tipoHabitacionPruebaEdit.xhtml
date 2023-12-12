@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>-- PRUEBA REGISTRO TIPO DE HABITACION --</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            
+            <br/>
+                    <p:dataTable value="#{tipoHabitacionBean.listTiposHabitaciones}"
+                                 var="th">
+                        <p:column headerText="Id:">
+                            <h:outputLabel value="#{th.idtipohabitacion}"/>
+                        </p:column>
+                        <p:column headerText="Descripcion">
+                            <h:inputText value="#{th.descripcion}"/>
+                        </p:column>
+                        <p:column headerText="Cantidad Matrimonial">
+                            <h:inputText value="#{th.cantidadmatrimonial}"/>
+                        </p:column>
+                        <p:column headerText="Cantidad Individual">
+                            <h:inputText value="#{th.cantidadindividual}"/>
+                        </p:column>
+                        <p:column headerText="Cantidad Baño">
+                            <h:inputText value="#{th.cantidadbaño}"/>
+                        </p:column>
+                        <p:column headerText="Extras">
+                            <h:inputText value="#{th.extras}"/>
+                        </p:column>
+
+                         
+                         <p:column>
+            <h:commandButton value="Modificar"
+                             action="#{tipoHabitacionBean.setTipoHabitacionEdit(th)}"/>
+                         </p:column>
+                         
+                         <p:column>
+            <h:commandButton value="Eliminar"
+                             action="#{tipoHabitacionBean.eliminarTipoHabitacion(th)}"/>
+                         </p:column>
+                    </p:dataTable>
+            <br/>
+            
+            <h:outputLabel value="Registro de Tipo Habitacion"/>
+            
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Id:"/>
+                <h:inputText value="#{tipoHabitacionBean.tipoHabitacion.idtipohabitacion}"/>
+                
+                <h:outputLabel value="Descripcion:"/>
+                <h:inputText value="#{tipoHabitacionBean.tipoHabitacion.descripcion}"/>
+                
+                <h:outputLabel value="Cantidad Matrimonial:"/>
+                <h:inputText value="#{tipoHabitacionBean.tipoHabitacion.cantidadmatrimonial}"/>
+                
+                <h:outputLabel value="Cantidad Individual:"/>
+                <h:inputText value="#{tipoHabitacionBean.tipoHabitacion.cantidadindividual}"/>
+                
+                <h:outputLabel value="Cantidad Baño:"/>
+                <h:inputText value="#{tipoHabitacionBean.tipoHabitacion.cantidadbaño}"/>
+                
+                <h:outputLabel value="Extras:"/>
+                <h:inputText value="#{tipoHabitacionBean.tipoHabitacion.extras}"/>
+                
+                
+                
+                
+                
+            </h:panelGrid>
+            
+            <h:commandButton value="Registrar"
+                             action="#{tipoHabitacionBean.guardarTipoHabitacion}"/>
+            
+        </h:form>
+    </h:body>
+</html>

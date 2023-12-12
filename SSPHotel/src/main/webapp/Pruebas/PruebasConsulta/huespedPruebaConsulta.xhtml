@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>-- TEST HUESPED REGISTRO --</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            
+            <br/>
+                    <p:dataTable value="#{huespedBean.listHuespedes}"
+                                 var="hspd">
+                        <p:column headerText="Id:">
+                            <h:outputLabel value="#{hspd.idhuesped}"/>
+                        </p:column>
+                        <p:column headerText="Documento">
+                            <h:outputLabel value="#{hspd.documentoh}"/>
+                        </p:column>
+                        <p:column headerText="Nombre">
+                            <h:outputLabel value="#{hspd.nombreh}"/>
+                        </p:column>
+                        <p:column headerText="Fecha de nacimiento">
+                            <h:outputLabel value="#{hspd.fnacimiento}">
+                    <f:convertDateTime pattern="dd/mm/yyyy"
+                                       type="date"
+                                       timeZone="#{usuariosBean.timeZone}"/>
+                            </h:outputLabel>
+                        </p:column>
+                        <p:column headerText="Nacionalidad">
+                            <h:outputLabel value="#{hspd.nacionalidadh}"/>
+                        </p:column>
+                        <p:column headerText="Genero">
+                            <h:outputLabel value="#{hspd.generoh}"/>
+                        </p:column>
+
+                    </p:dataTable>
+            <br/>
+            
+            <h:outputLabel value="Huesped registro"/>
+            
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Id:"/>
+                <h:inputText value="#{huespedBean.huesped.idhuesped}"/>
+                
+                <h:outputLabel value="Documento:"/>
+                <h:inputText value="#{huespedBean.huesped.documentoh}"/>
+                
+                <h:outputLabel value="Nombre:"/>
+                <h:inputText value="#{huespedBean.huesped.nombreh}"/>
+                
+                <h:outputLabel value="Fecha de nacimiento:"/>
+                <h:inputText value="#{huespedBean.huesped.fnacimiento}">
+                    <f:convertDateTime pattern="dd/mm/yyyy"
+                                       type="date"
+                                       timeZone="#{usuariosBean.timeZone}"/>
+                    </h:inputText>
+                
+                <h:outputLabel value="Nacionalidad:"/>
+                <h:inputText value="#{huespedBean.huesped.nacionalidadh}"/>
+                
+                <h:outputLabel value="Genero:"/>
+                <h:inputText value="#{huespedBean.huesped.generoh}"/>
+                
+                
+                
+                
+            </h:panelGrid>
+            
+            <h:commandButton value="Registrar"
+                             action="#{huespedBean.guardarHuesped}"/>
+            
+        </h:form>
+    </h:body>
+</html>
